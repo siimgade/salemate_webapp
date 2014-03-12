@@ -1,0 +1,298 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;    
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+@font-face {
+    font-family: ThaiSansNeue-UltraLight;
+    src:url(../fonts/ThaiSansNeue-UltraLight.ttf);
+
+    font-family: ThaiSansNeue-ExtraLight
+    src: url(../fonts/ThaiSansNeue-ExtraLight.ttf);
+
+    font-family: Roboto-Regular;
+    src:url(../fonts/Roboto-Regular.ttf);
+}
+
+body{
+	font-family: ThaiSansNeue-ExtraLight, arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 5em;
+}
+
+h2{
+	font-size: 4em;	
+}
+
+h3{
+	font-size: 3em;
+}
+
+.margin-text p{
+	font-family: ThaiSansNeue-UltraLight;
+	font-size: 2.5em;
+	line-height: 120%;
+}
+.section{
+	text-align:center;
+}
+
+.gray-bg {
+	background: #f4f4f4;
+}
+
+#menu{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+
+#login li {
+	display:inline-block;
+	margin: 10px;
+}
+
+
+#login{
+	position:fixed;
+	z-index: 70;
+	width: 100%;
+	margin:0;
+}
+
+.btn-transparent {
+  color: #555;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #555;
+}
+
+.btn-transparent:hover {
+  color: #fff;
+  background-color: #555;
+  border-width: 2px;
+  border-color: #555;
+}
+
+
+#section0{
+	background-image: url(../images/bg2.jpg);
+	background-size: cover;
+	color: #fff;
+}
+
+#section1 img{
+	max-width: 110%;
+	margin-top: 20%;
+}	
+#section2 img{
+	margin-top: 15%;
+}
+#section3 img{
+	max-width: 80%;
+	margin: 20px 0 -80px 0;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.twitter-share-button{
+	position: absolute;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#fullPage-nav{
+	position: absolute;
+	z-index: 100;
+	margin-top: -32px;
+	top: 50%;
+	opacity: 1;
+	left: 17px;
+}
+#fullPage-nav li{
+	display: block;
+	width: 14px;
+	height: 13px;
+	margin: 7px;
+}
+#fullPage-nav li a{
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+}
+#fullPage-nav li .active span{
+	background: #333;
+}
+#fullPage-nav span{
+	top: 2px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #000;
+	background: rgba(0, 0, 0, 0);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+}
+
+#section0-left {
+	text-align: left;
+	margin: 50px 0 30px 46px;
+	color: #666;
+	font-family: Roboto-thin;
+	font-size: 26px;
+	line-height: 170%;
+}
+
+#section1-header {
+	text-align: left;
+	margin: 0 0 0 50px;
+	color: #555;
+	font-family: Roboto-thin;
+}
+
+#section1-desc {
+	text-align: left;
+	margin: 20px 0 20px 50px;
+	color: #666;
+}
+
+#section2-header {
+	text-align: left;
+	margin: 0 50px 0 50px;
+	color: #555;
+	font-family: Roboto-thin;
+}
+
+#section2-desc {
+	text-align: left;
+	margin: 20px 50px 20px 50px;
+	color: #666;
+}
+
+#section3-header {
+	text-align: center;
+	color: #555;
+	font-family: Roboto-thin;
+	padding: 0 250px 0 250px;
+}
+
+#section3-desc {
+	text-align: center;
+	margin: 20px 0 20px 0px;
+	padding: 0 250px 0 250px;
+	color: #666;
+}
+
+.section1-top {
+	margin-top: 100px;
+}
+
+.margin-btn {
+	float: left;
+	margin-top: 30px;
+}
+
+.margin-text {
+	float: left;
+	margin-top: 10px;
+}
+
+.btn-xlg, .btn-group-xlg>.btn {
+	padding: 15px 40px 15px 40px;
+	font-size: 25px;
+	line-height: 1.33;
+	border-radius: 6px;
+}
+
+.v-middle {
+	margin-top: 17%;
+}
+
+.img-logo2x {
+	display: block;
+	max-width: 60%;
+	height: auto;
+}
+
+.appstore-logo {
+	width: 40%;
+	height: auto;
+	float: left;
+	margin-left: 46px;
+}
+
+.navbar-login {
+	float: right;
+}
+
+.modal-header-login {
+	background: #555;
+	color: #fff;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-bottom: none;
+	padding: 15px;
+	min-height: 16.42857143px;
+	text-align: center;
+}

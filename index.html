@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Salemate</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="bs3/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css" />
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/fullPage-frontend-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/flatlab-frontend-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/flatlab-frontend-style-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery-multi-select/css/multi-select.css" />
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker/compiled/timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datetimepicker/css/datetimepicker.css" />
+
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	<script src="bs3/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#menu").hide();
+			var pepe = $.fn.fullpage({
+				//slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+				menu: '#menu',
+				fixedElements : "#loginModal",
+				navigation: true,
+				onLeave: function(index, direction){
+					if (index == 1 && direction == "down") {
+						$("#menu").fadeIn(300);
+					}
+				},
+				afterLoad: function(anchorLink, index){
+					if (index == 1) {
+						$("#menu").fadeOut(300);
+					}
+				}
+			});
+			
+		});
+	</script>
+
+
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="firstPage" class="pull-right"><a href="#firstPage"><img src="images/gototop.png"></a></li>
+</ul>
+
+<ul id="login">
+	<li class="pull-right"><button type="button" class="btn btn-transparent" data-toggle="modal" data-target="#loginModal" >Login</button></li>
+</ul>
+
+<div class="section" id="section0">
+	<div class="container"> 
+		<div>
+			<div class="col-md-5">
+				<img class="img-logo2x" src="images/logo.png"/>
+				<h4 id="section0-left">Never miss a deal when you go shopping. Start saving on everything you’re looking for</h4>
+				<img class="appstore-logo" src="images/appstore.png" />
+			</div>
+			<div class="col-md-7">
+				<img class="img-responsive" src="images/iphone1.png"/>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section" id="section1">
+	<div class="container"> 
+		<div class="row">
+			<div class="col-md-6">
+				<img src="images/feature1.png"/>
+			</div>
+			<div class="col-md-6 v-middle">
+				<h3 id="section1-header">Track the best coupon and sales across multiple sites.</h3>
+				<div class="margin-text">
+					<p id="section1-desc">รวบรวมโปรโมชั่นและคูปองใหม่ๆ ไว้ในมือคุณ ทำให้ไม่พลาดทุกสิทธิประโยชน์ของการช็อปปิ้ง</p>
+				</div>			
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section" id="section2">
+	<div class="container"> 
+		<div class="row">
+			<div class="col-md-7 v-middle">
+				<h3 id="section2-header">Automatically notify as soon as you reach the store.</h3>
+				<div class="margin-text">
+					<p id="section2-desc">แจ้งเตือนโปรโมชั่นรอบตัวทันทีที่คุณก้าวผ่านร้านค้า</p>
+				</div>	
+			</div>
+			<div class="col-md-5">
+				<img class="img-responsive" src="images/feature2.png"/>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section" id="section3">
+	<div class="container"> 
+		<div class="row">
+			<h3 id="section3-header">Share deals with friends and family.</h3>
+			<div>
+				<p id="section3-desc">แชร์ข้อมูลถึงกันได้ง่ายผ่านทาง facebook และ twitter</p>
+			</div>
+			<div>
+				<img src="images/feature3.png"/>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section gray-bg" id="section4">
+	<div class="container"> 
+		<div class="row">
+			<h1 id="section3-header">Are you Store Owners?</h1>
+			<div>
+				<p id="section3-desc">ลงประกาศโปรโมชั่นกับเราได้แล้ววันนี้ ฟรีไม่เสียค่าใช้จ่าย</p>
+			</div>
+			<div style="margin-top: 60px">
+				<a href="register.html" class="btn btn-purchase">Join now</a>
+			</div>
+
+		</div>
+	</div>
+	<footer class="site-footer">
+          <div class="text-center">
+              2014 © Salemate.
+          </div>
+	</footer>
+</div>
+
+
+
+
+<!--login modal-->
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-wide">
+      <div class="modal-content">
+        <div class="modal-header-login">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-signin">
+          	<div class="login-wrap">
+	            <input type="text" class="form-control" placeholder="User ID" autofocus>
+	            <input type="password" class="form-control" placeholder="Password">
+	            <label class="checkbox">
+	                <input type="checkbox" value="remember-me"> Remember me
+	                <span class="pull-right">
+	                    <a data-toggle="modal" href="#myModal"> Forgot Password?</a>
+
+	                </span>
+	            </label>
+	            <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
+	   
+	            <div class="registration">
+	                Don't have an account yet?
+	                <a href="" data-toggle="modal" data-target="#registerModal">
+	                    Create an account
+	                </a>
+	            </div>		
+	        </div>
+        </div>
+        </div>
+ 
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!--register modal-->
+<div class="modal fade" id="registerModal">
+    <div class="register-modal-dialog modal-wide">
+      <div class="modal-content">
+        <div class="modal-header-login">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Register</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-register">
+          	<div class="form-group last">
+          			<div>
+		              <div class="fileupload fileupload-new" data-provides="fileupload">
+		                  <div class="fileupload-new thumbnail">
+		                      <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
+		                  </div>
+		                  <div class="fileupload-preview fileupload-exists thumbnail" style="line-height: 20px;"></div>
+		                  <div>
+		                   <span class="btn btn-white btn-file">
+		                   <span class="fileupload-new"><i class="icon-paper-clip"></i> Upload Logo</span>
+		                   <span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+		                   <input type="file" class="default" />
+		                   </span>
+		                      <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon-trash"></i> Remove</a>
+		                  </div>
+		              </div>
+           
+          			</div>
+      	</div>
+
+   			<input type="text" class="form-control" placeholder="Store Name" autofocus>
+            <input type="text" class="form-control" placeholder="User Name" autofocus>
+            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" class="form-control" placeholder="Re-type Password">
+            <label class="checkbox">
+                <input type="checkbox" value="agree this condition"> I agree to the Terms of Service and Privacy Policy
+            </label>
+            <button class="btn btn-lg btn-login btn-block" type="submit">Submit</button>
+
+
+        </div>
+   
+        </div>
+ 
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <script type="text/javascript" src="assets/fuelux/js/spinner.min.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+  <script type="text/javascript" src="assets/jquery-multi-select/js/jquery.multi-select.js"></script>
+  <script type="text/javascript" src="assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+    <!--this page  script only-->
+    <script src="js/advanced-form-components.js"></script>
+
+</body>
+</html>

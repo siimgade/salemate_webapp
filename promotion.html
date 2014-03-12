@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Salemate - admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/backend-style.css" rel="stylesheet">
+    <link href="css/backend-style-responsive.css" rel="stylesheet" />
+    <link href="assets/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
+    <link href="http://xenon.it.kmitl.ac.th/seniorproject/static/css/datepicker3.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css" />
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header white-bg">
+        <div class="col-lg-10 col-lg-offset-1">
+          <!--logo start-->
+          <a href="index.html" class="logo" >Flat<span>lab</span></a>
+          <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="promotion.html">Promotion&Coupon</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+              </ul>
+            </div>
+          <div class="top-nav ">
+              <ul class="nav pull-right top-menu">
+                  <!-- user login dropdown start-->
+                  <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                          <img alt="" src="img/avatar1_small.jpg">
+                          <span class="username">Jhon Doue</span>
+                          <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu extended logout">
+                          <div class="log-arrow-up"></div>
+                          <li><a href="#"><i class="icon-suitcase" style="margin-right: 2px;"></i> Profile</a></li>
+                          <li><a href="#"><i class="icon-cog" style="margin-right: 2px;"></i> Settings</a></li>
+                          <li><a href="login.html"><i class="icon-key" style="margin-right: 2px;"></i> Log Out</a></li>
+                      </ul>
+                  </li>
+                  <!-- user login dropdown end -->
+              </ul>
+          </div>
+        </div>
+      </header>
+      <!--header end-->
+      <!--main content start-->
+      <section id="main-content2">
+          <section class="wrapper">
+              <!-- page start-->
+              <div class="row">
+                  <div class="col-lg-10 col-lg-offset-1" style="margin-top: 5px;">
+                      <section class="tablepanel">
+                          <header class="panel-heading">
+                              Type
+                              <button type="button" class="btn btn-info btn-xs">All</button>
+                              <button type="button" class="btn btn-default btn-xs">Promotion</button>
+                              <button type="button" class="btn btn-default btn-xs">Coupon</button> 
+                              <ul class="nav2 pull-right top-menu">
+                                <li>
+                                  <input type="text" class="form-control search" placeholder="Search">
+                                </li>
+                                <li>
+                                  <button type="button" class="btn btn-success add-button" data-toggle="modal" data-target="#add-promotion-modal">Add Promotion</button>
+                                </li>
+                                <li>
+                                  <button type="button" class="btn btn-success add-button" data-toggle="modal" data-target="#add-coupon-modal">Add Coupon</button>
+                                </li>
+                              </ul>
+                          </header>
+                          <table class="table table-striped table-advance table-hover">
+                              <thead>
+                              <tr>
+                                  <th class="col-xs-4">Topic</th>
+                                  <th class="col-xs-1">Type</th>
+                                  <th class="col-xs-1">Date modified</th>
+                                  <th class="col-xs-1"></th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td><a href="#">Vector Ltd</a></td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="#">
+                                          Adimin co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Coupon</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="#">
+                                          boka soka
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="#">
+                                          salbal llb
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><a href="#">Vector Ltd</a></td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="#">
+                                          Adimin co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><a href="#">Vector Ltd</a></td>
+                                  <td class="hidden-phone">Coupon</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="#">
+                                          Adimin co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><a href="#">Vector Ltd</a></td>
+                                  <td class="hidden-phone">Promotion</td>
+                                  <td class="hidden-phone">DD/MM/YY</td>
+                                  <td>
+                                      <button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button>
+                                  </td>
+                              </tr>
+                              </tbody>
+                          </table>
+                      </section>
+
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="dataTables_info" id="editable-sample_info">Showing 1 to 5 of 15 entries</div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="dataTables_paginate paging_bootstrap pagination">
+                            <ul>
+                              <li class="prev disabled">
+                                <a href="#">← Prev</a>
+                              </li>
+                              <li class="active">
+                                <a href="#">1</a>
+                              </li>
+                              <li>
+                                <a href="#">2</a>
+                              </li>
+                              <li>
+                                <a href="#">3</a>
+                              </li>
+                              <li class="next">
+                                <a href="#">Next → </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+              </div>
+
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2014 &copy; Salemate. 
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+
+  <div class="modal fade" id="add-promotion-modal">
+    <div class="modal-dialog modal-wide">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Add promotion</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+            <form role="form">
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <input type="text" class="form-control" id="topic" placeholder="Enter Topic" ng-model="topic">
+                </div>
+                <div class="form-group">
+                    <label for="start_date">Date</label>
+                    <div class="input-daterange input-group" id="date1">
+                        <input type="text" class="input-sm form-control" name="start" ng-model="datestart" style="width:190px;">
+                        <span class="input-group-addon" style="width:25px;">to</span>
+                        <input type="text" class="input-sm form-control" name="end" ng-model="dateend" style="width:190px;">
+                    </div>
+                </div>
+                <div class="form-group place">
+                    <label for="place">Place</label>
+                    <input type="text" class="form-control" id="place" placeholder="Enter Place" ng-model="place">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                      <div class="fileupload-new thumbnail">
+                          <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
+                      </div>
+                      <div class="fileupload-preview fileupload-exists thumbnail" style="line-height: 20px;"></div>
+                      <div>
+                       <span class="btn btn-white btn-file">
+                       <span class="fileupload-new"><i class="icon-paper-clip"></i> Upload Logo</span>
+                       <span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+                       <input type="file" class="default" />
+                       </span>
+                          <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon-trash"></i> Remove</a>
+                      </div>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" rows="8" ng-model="desc" placeholder="Enter Description"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="col-md-6">
+                <div>
+                  <!--<img class="imgpreview" href="img/feature2.png">-->
+                  <div class="off-canvas-wrap">
+                    <div class="inner-wrap">
+                      <nav class="tab-bar">
+                        <section class="left-small">
+                          <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+                        </section>
+
+                        <section class="middle tab-bar-section preview-iphone">
+                          <h1 class="title" id="preview-topic">{{topic}}</h1>
+                          <h3 id="preview-date">{{datestart}} {{dateend}}</h3>
+                          <h3>{{place}}</h3>
+                          <h3>{{desc}}</h3> 
+                        </section>
+                      
+                      </nav>
+
+
+                      <section class="main-section" style="background-color:#CFCFC4">
+                        <!-- content goes here -->
+                        <p id="topicPreviewCouponHeader" style="width:320px;">
+                        </p>
+                        
+                      </section>
+
+                      <a class="exit-off-canvas"></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="modal fade" id="add-coupon-modal">
+    <div class="modal-dialog modal-wide">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Add coupon</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+            <form role="form">
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <input type="text" class="form-control" id="topic" placeholder="Enter topic" ng-model="coupon_topic">
+                </div>
+                <div class="form-group">
+                    <label for="start_date">Date</label>
+                    <div class="input-daterange input-group" id="date2">
+                        <input type="text" class="input-sm form-control" name="start" ng-model="datestart" style="width:190px;">
+                        <span class="input-group-addon" style="width:25px;">to</span>
+                        <input type="text" class="input-sm form-control" name="end" ng-model="dateend" style="width:190px;">
+                    </div>
+                </div>
+                <div class="form-group place">
+                    <label for="place">Place</label>
+                    <input type="text" class="form-control" id="place" placeholder="Enter place" ng-model="place">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                      <div class="fileupload-new thumbnail">
+                          <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
+                      </div>
+                      <div class="fileupload-preview fileupload-exists thumbnail" style="line-height: 20px;"></div>
+                      <div>
+                       <span class="btn btn-white btn-file">
+                       <span class="fileupload-new"><i class="icon-paper-clip"></i> Upload Logo</span>
+                       <span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+                       <input type="file" class="default" />
+                       </span>
+                          <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon-trash"></i> Remove</a>
+                      </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="coupon">Number of Coupon</label>
+                    <input type="number" class="form-control" id="number" placeholder="Coupon number" value="5" min="1" ng-model="couponNumber">
+                  <!--div class="spinner">
+                      <div class="input-group" style="width:150px;">
+                          <div class="spinner-buttons input-group-btn">
+                              <button type="button" class="btn spinner-up btn-warning">
+                                  <i class="icon-plus"></i>
+                              </button>
+                          </div>
+                          <input type="text" class="spinner-input form-control" maxlength="3" readonly ng-model="couponNumber">
+                          <div class="spinner-buttons input-group-btn">
+                              <button type="button" class="btn spinner-down btn-danger">
+                                  <i class="icon-minus"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div-->
+
+
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" rows="8" ng-model="desc" placeholder="Enter Description"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="col-md-6">
+                <device-width>
+                  <div class="off-canvas-wrap">
+                    <div class="inner-wrap">
+                      <nav class="tab-bar">
+                        <section class="left-small">
+                          <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+                        </section>
+
+                        <section class="middle tab-bar-section preview-iphone">
+                          <h1 class="title" id="preview-topic">{{coupon_topic}}</h1>
+                          <h3 id="preview-date">{{datestart}} {{dateend}}</h3>
+                          <h3>{{place}}</h3>
+                          <h3>{{couponNumber}}</h3>
+                          <h3>{{desc}}</h3> 
+                        </section>
+                      </nav>
+
+          
+
+                      <section class="main-section" style="background-color:#CFCFC4">
+                        <!-- content goes here -->
+                        <p id="topicPreviewCouponHeader" style="width:320px;">
+                        </p>
+                        
+                      </section>
+
+                      <a class="exit-off-canvas"></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script> 
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="assets/fuelux/js/spinner.min.js"></script>
+    <script src="js/custom.js"></script> 
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
+    <script src="js/respond.min.js" ></script>
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+      <!--script for this page only-->
+      <script src="js/editable-table.js"></script>
+      <script src="http://xenon.it.kmitl.ac.th/seniorproject/static/js/bootstrap-datepicker.js"></script>
+      <script src="js/advanced-form-components.js"></script>
+      <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+
+      <!-- END JAVASCRIPTS -->
+      <script>
+          jQuery(document).ready(function() {
+              EditableTable.init();
+              $('#date1 input,#date2 input').datepicker({
+                  autoclose: true,
+                  todayHighlight: true
+              });
+          });
+      </script>
+  </body>
+</html>
